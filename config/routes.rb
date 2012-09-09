@@ -1,4 +1,6 @@
 Beerapp::Application.routes.draw do
+  resources :tastes
+
   resources :users
 
   resources :beers

@@ -55,7 +55,7 @@ INSERT INTO 'brewery' ('id', 'name', 'web', 'country') VALUES
 
 
 
-INSERT INTO `beer` ('id', 'name', 'brewery_id', 'alcohol') VALUES
+INSERT INTO 'beer' ('id', 'name', 'brewery_id', 'alcohol') VALUES
 (1, 'Nørrebryg', 1, NULL),
 (2, 'Goudenband', 2, NULL),
 (3, 'Trappist 6', 3, NULL),
@@ -153,11 +153,11 @@ CREATE TABLE IF NOT EXISTS `tastingDate` (
 -- Table structure for table `tastingScheme`
 --
 
-CREATE TABLE IF NOT EXISTS `tastingScheme` (
+CREATE TABLE IF NOT EXISTS `tasting` (
   `id` int(11) NOT NULL auto_increment,
   `tastingDate` date default NULL,
-  `beer` int(11) NOT NULL,
-  `participant` int(11) NOT NULL,
+  `beer_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `scentHopsFlower` int(11) default NULL,
   `scentFruit` int(11) default NULL,
   `scentMalt` int(11) default NULL,
@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `tastingScheme` (
 -- Dumping data for table `tastingScheme`
 --
 
-INSERT INTO `tastingScheme` (`id`, `tastingDate`, `beer`, `participant`, `scentHopsFlower`, `scentFruit`, `scentMalt`, `foamAmount`, `foamColor`, `foamDensity`, `foamTime`, `clarityClarity`, `clarityPrecipitate`, `color`, `tasteSweetness`, `tasteBitterness`, `tasteAftertaste`, `mouthTemp`, `mouthCarbon`, `mouthFill`, `score`, `comment`) VALUES
+INSERT INTO 'tasting' ('id', 'tastingDate', 'beer_id', 'user_id', 'scentHopsFlower', 'scentFruit', 'scentMalt', 'foamAmount', 'foamColor', 'foamDensity', 'foamTime', 'clarityClarity', 'clarityPrecipitate', 'color', 'tasteSweetness', 'tasteBitterness', 'tasteAftertaste', 'mouthTemp', 'mouthCarbon', 'mouthFill', 'score', 'comment') VALUES
 (17, '2010-03-19', 1, 1, 10, 60, NULL, 68, 88, 43, 42, 63, 63, 71, 58, 46, 90, 76, 33, 73, 3, '0'),
 (18, '2010-03-19', 3, 3, 80, 120, 0, 120, 3, 81, 81, 80, 119, 24, 40, 80, 120, 3, 62, 80, 6, '0'),
 (16, '2010-03-19', 2, 1, 0, 88, 0, 11, 108, 20, 0, 34, 30, 84, 80, 52, 98, 6, 8, 35, 3, '0'),
