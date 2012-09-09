@@ -13,45 +13,45 @@ CREATE TABLE IF NOT EXISTS `beer` (
 */
 
 # Breweries
-INSERT INTO 'brewery' ('id', 'name', 'web') VALUES
-(1, 'Grauballe Bryghus', NULL),
-(2, 'Liefmans', NULL),
-(3, 'Westvleteren', NULL),
-(4, 'Flying Dog Brewery', NULL),
-(5, 'Founders', NULL),
-(6, 'Hoegarden', NULL),
-(7, 'Mikeller', NULL),
-(8, 'Bøgedal', NULL),
-(9, 'Beer Here', NULL),
-(10, 'Skagen Bryghus', NULL),
-(11, 'Chimay', NULL),
-(12, 'Carlsberg', NULL),
-(13, 'Hoppin Frog', NULL),
-(14, 'Avery Brewing', NULL),
-(15, 'Jacobsen', NULL),
-(16, 'Ambar', NULL),
-(17, 'Southern Tier Breweing Company', NULL),
-(18, 'Samuel Smith', NULL),
-(19, 'Belhaven', NULL),
-(20, 'Maisels Weisse', NULL),
-(21, 'Indslev', NULL),
-(22, 'De Konick', NULL),
-(23, 'Gouden Carolus', NULL),
-(24, 'Hancock', NULL),
-(25, 'Refsvindinge', NULL),
-(26, 'Thomas Hardys', NULL),
-(27, 'Theakston Brewery', NULL),
-(28, 'Nørrebro Bryghus', NULL),
-(29, 'Duvel Moortgat Brewery', NULL),
-(30, 'Herslev', NULL),
-(31, 'Raasted', NULL),
-(32, 'Achel', NULL),
-(33, 'Bitburger', NULL),
-(34, 'Svaneke Bryghus'), NULL),
-(35, 'Spaten', NULL),
-(36, 'Fur', NULL),
-(37, 'Kulmbacher Braueri', NULL),
-(38, 'Skands', NULL);
+INSERT INTO 'brewery' ('id', 'name', 'web', 'country') VALUES
+(1, 'Grauballe Bryghus', NULL, NULL),
+(2, 'Liefmans', NULL, NULL),
+(3, 'Westvleteren', NULL, NULL),
+(4, 'Flying Dog Brewery', NULL, NULL),
+(5, 'Founders', NULL, NULL),
+(6, 'Hoegarden', NULL, NULL),
+(7, 'Mikeller', NULL, NULL),
+(8, 'Bøgedal', NULL, NULL),
+(9, 'Beer Here', NULL, NULL),
+(10, 'Skagen Bryghus', NULL, NULL),
+(11, 'Chimay', NULL, NULL),
+(12, 'Carlsberg', NULL, NULL),
+(13, 'Hoppin Frog', NULL, NULL),
+(14, 'Avery Brewing', NULL, NULL),
+(15, 'Jacobsen', NULL, NULL),
+(16, 'Ambar', NULL, NULL),
+(17, 'Southern Tier Breweing Company', NULL, NULL),
+(18, 'Samuel Smith', NULL, NULL),
+(19, 'Belhaven', NULL, NULL),
+(20, 'Maisels Weisse', NULL, NULL),
+(21, 'Indslev', NULL, NULL),
+(22, 'De Konick', NULL, NULL),
+(23, 'Gouden Carolus', NULL, NULL),
+(24, 'Hancock', NULL, NULL),
+(25, 'Refsvindinge', NULL, NULL),
+(26, 'Thomas Hardys', NULL, NULL),
+(27, 'Theakston Brewery', NULL, NULL),
+(28, 'Nørrebro Bryghus', NULL, NULL),
+(29, 'Duvel Moortgat Brewery', NULL, NULL),
+(30, 'Herslev', NULL, NULL),
+(31, 'Raasted', NULL, NULL),
+(32, 'Achel', NULL, NULL),
+(33, 'Bitburger', NULL, NULL),
+(34, 'Svaneke Bryghus'), NULL, NULL),
+(35, 'Spaten', NULL, NULL),
+(36, 'Fur', NULL, NULL),
+(37, 'Kulmbacher Braueri', NULL, NULL),
+(38, 'Skands', NULL, NULL);
 
 
 
@@ -104,25 +104,7 @@ INSERT INTO `beer` ('id', 'name', 'brewery_id', 'alcohol') VALUES
 (87, 'Imperial Stout', 31, NULL),
 (88, 'Imperial Stout', 18, NULL);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `brewery`
---
-
-CREATE TABLE IF NOT EXISTS `brewery` (
-  `id` int(11) NOT NULL auto_increment,
-  `name` varchar(45) character set utf8 collate utf8_danish_ci default NULL,
-  `country` varchar(45) character set utf8 collate utf8_danish_ci default NULL,
-  `homepage` varchar(45) character set utf8 collate utf8_danish_ci default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `participant`
---
+/*
 
 CREATE TABLE IF NOT EXISTS `participant` (
   `id` int(11) NOT NULL auto_increment,
@@ -132,20 +114,17 @@ CREATE TABLE IF NOT EXISTS `participant` (
   `image` varchar(45) character set utf8 collate utf8_danish_ci default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+*/
 
---
--- Dumping data for table `participant`
---
-
-INSERT INTO `participant` (`id`, `name`, `username`, `password`, `image`) VALUES
-(1, 'Sune', 'sune', NULL, NULL),
-(2, 'Nette', 'nette', NULL, NULL),
-(3, 'Lau', 'lau', NULL, NULL),
-(4, 'Sarah', 'sarah', NULL, NULL),
-(5, 'Simon', 'simon', NULL, NULL),
-(6, 'Pernille', 'pernille', NULL, NULL),
-(7, 'Jeppe', 'jeppe', NULL, NULL),
-(8, 'Ditte', 'ditte', NULL, NULL);
+INSERT INTO 'users' ('id', 'name') VALUES
+(1, 'Sune'),
+(2, 'Nette'),
+(3, 'Lau'),
+(4, 'Sarah'),
+(5, 'Simon'),
+(6, 'Pernille'),
+(7, 'Jeppe'),
+(8, 'Ditte');
 
 -- --------------------------------------------------------
 
@@ -519,7 +498,3 @@ INSERT INTO `tastingScheme` (`id`, `tastingDate`, `beer`, `participant`, `scentH
 (325, '2008-06-28', 88, 8, 69, 22, 80, 47, 89, 85, 29, 21, 26, 96, 43, 76, 90, 35, 43, 87, 6, NULL),
 (326, '2008-06-28', 88, 3, 2, 2, 118, 40, 40, 77, 40, 117, 40, 120, NULL, NULL, NULL, 84, 40, 80, 7, NULL),
 (327, '2008-06-28', 88, 5, 1, 1, 112, 37, 101, 80, 23, 2, 11, 119, 25, 34, 35, 86, 32, 80, 5, NULL);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
