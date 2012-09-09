@@ -31,7 +31,7 @@
 <% @tastings.each do |tasting| %>
   <tr>
     <td><%= tasting.date %></td>
-    <td><%= tasting.beer_id %></td>
+    <td><%= tasting.beer.name %></td>
     <td><%= tasting.user_id %></td>
     <td><%= tasting.scentHopsFlower %></td>
     <td><%= tasting.scentFruit %></td>

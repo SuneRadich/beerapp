@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909192902) do
+ActiveRecord::Schema.define(:version => 20120909195903) do
 
   create_table "beers", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,38 @@ ActiveRecord::Schema.define(:version => 20120909192902) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "country"
+  end
+
+  create_table "tastings", :force => true do |t|
+    t.date     "date"
+    t.integer  "beer_id"
+    t.integer  "user_id"
+    t.integer  "scentHopsFlower"
+    t.integer  "scentFruit"
+    t.integer  "scentMalt"
+    t.integer  "foamAmout"
+    t.integer  "foamColor"
+    t.integer  "foamDensity"
+    t.integer  "foamTime"
+    t.integer  "clarityClarity"
+    t.integer  "clarityPrecipitate"
+    t.integer  "color"
+    t.integer  "tasteSweetness"
+    t.integer  "tasteBitterness"
+    t.integer  "tasteAftertaste"
+    t.integer  "mouthTemp"
+    t.integer  "mouthCarbon"
+    t.integer  "mouthFill"
+    t.integer  "score"
+    t.text     "coment"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
