@@ -1,4 +1,4 @@
-<%= form_for(@tasting) do |f| %>
+<%= form_for(@tasting, :html => { :class => 'form-horizontal'} ) do |f| %>
   <% if @tasting.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tasting.errors.count, "error") %> prohibited this tasting from being saved:</h2>
@@ -11,91 +11,140 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
+  <div class="control-group">
+    <%= label_tag(:date, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.date_select :date %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :beer_id %><br />
-    <%= f.number_field :beer_id %>
+
+  <div class="control-group">
+    <%= label_tag(:beer_id, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= collection_select(:tasting, :beer_id, Beer.all, :id, :name, :prompt => "Select beer") %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+
+<div class="control-group">
+   <%= label_tag(:user_id, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= collection_select(:tasting, :user_id, User.all, :id, :name, :prompt => "Select user") %>
+    </div>
+</div>
+
+  <div class="control-group">
+    <%= label_tag(:scentHopsFlower, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :scentHopsFlower %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :scentHopsFlower %><br />
-    <%= f.number_field :scentHopsFlower %>
+  
+  <div class="control-group">
+    <%= label_tag(:scentFruit, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :scentFruit %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :scentFruit %><br />
-    <%= f.number_field :scentFruit %>
+  <div class="control-group">
+    <%= label_tag(:scentMalt, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :scentMalt %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :scentMalt %><br />
-    <%= f.number_field :scentMalt %>
+  <div class="control-group">
+    <%= label_tag(:foamAmount, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :foamAmount %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :foamAmout %><br />
-    <%= f.number_field :foamAmout %>
+  <div class="control-group">
+    <%= label_tag(:foamColor, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :foamColor %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :foamColor %><br />
-    <%= f.number_field :foamColor %>
+  <div class="control-group">
+    <%= label_tag(:foamDensity, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :foamDensity %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :foamDensity %><br />
-    <%= f.number_field :foamDensity %>
+  <div class="control-group">
+    <%= label_tag(:foamTime, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :foamTime %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :foamTime %><br />
-    <%= f.number_field :foamTime %>
+  <div class="control-group">
+    <%= label_tag(:clarityClarity, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :clarityClarity %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :clarityClarity %><br />
-    <%= f.number_field :clarityClarity %>
+  <div class="control-group">
+    <%= label_tag(:clarityPrecipitate, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :clarityPrecipitate %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :clarityPrecipitate %><br />
-    <%= f.number_field :clarityPrecipitate %>
+  <div class="control-group">
+    <%= label_tag(:color, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :color %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :color %><br />
-    <%= f.number_field :color %>
+  <div class="control-group">
+     <%= label_tag(:tasteSweetness, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :tasteSweetness %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :tasteSweetness %><br />
-    <%= f.number_field :tasteSweetness %>
+  <div class="control-group">
+     <%= label_tag(:tasteBitterness, nil, :class => "control-label") %>
+     <div class="controls">
+      <%= f.number_field :tasteBitterness %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :tasteBitterness %><br />
-    <%= f.number_field :tasteBitterness %>
+  <div class="control-group">
+    <%= label_tag(:tasteAftertaste, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :tasteAftertaste %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :tasteAftertaste %><br />
-    <%= f.number_field :tasteAftertaste %>
+  <div class="control-group">
+    <%= label_tag(:mouthTemp, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :mouthTemp %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :mouthTemp %><br />
-    <%= f.number_field :mouthTemp %>
+  <div class="control-group">
+    <%= label_tag(:mouthCarbon, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :mouthCarbon %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :mouthCarbon %><br />
-    <%= f.number_field :mouthCarbon %>
+  <div class="control-group">
+    <%= label_tag(:mouthFill, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :mouthFill %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :mouthFill %><br />
-    <%= f.number_field :mouthFill %>
+  <div class="control-group">
+    <%= label_tag(:score, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.number_field :score %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :score %><br />
-    <%= f.number_field :score %>
+ 
+  <div class="control-group">
+    <%= label_tag(:coment, nil, :class => "control-label") %>
+    <div class="controls">
+      <%= f.text_area :coment %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :coment %><br />
-    <%= f.text_area :coment %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="control-group">
+    <div class="controls">
+      <%= submit_tag(nil, :class => "btn btn-primary") %>
+    </div>
   </div>
 <% end %>

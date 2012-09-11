@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909195903) do
+ActiveRecord::Schema.define(:version => 20120911200855) do
 
   create_table "beers", :force => true do |t|
     t.string   "name"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20120909195903) do
     t.integer  "scentHopsFlower"
     t.integer  "scentFruit"
     t.integer  "scentMalt"
-    t.integer  "foamAmout"
+    t.integer  "foamAmount"
     t.integer  "foamColor"
     t.integer  "foamDensity"
     t.integer  "foamTime"
