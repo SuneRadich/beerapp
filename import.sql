@@ -131,7 +131,7 @@ INSERT INTO 'users' ('id', 'name') VALUES
 --
 -- Table structure for table `tastingDate`
 --
-
+/*
 CREATE TABLE IF NOT EXISTS `tastingDate` (
   `id` int(11) NOT NULL auto_increment,
   `date` datetime default NULL,
@@ -146,13 +146,13 @@ CREATE TABLE IF NOT EXISTS `tastingDate` (
   KEY `mainCourseBeer` (`mainCourseBeer`),
   KEY `desertBeer` (`desertBeer`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
+*/
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `tastingScheme`
 --
-
+/*
 CREATE TABLE IF NOT EXISTS `tasting` (
   `id` int(11) NOT NULL auto_increment,
   `tastingDate` date default NULL,
@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `tasting` (
   KEY `tastingDate` (`tastingDate`),
   KEY `beer` (`beer`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=328 ;
-
+*/
 --
 -- Dumping data for table `tastingScheme`
 --
