@@ -144,10 +144,16 @@
       <%= f.number_field :mouthFill %>
     </div>
   </div>
+
   <div class="control-group">
     <%= label_tag(:score, nil, :class => "control-label") %>
     <div class="controls">
-      <%= f.number_field :score %>
+      <% (1..8).to_a.each do |score| %>
+      <label class="radio inline">
+        <%= f.radio_button :score, score %>
+        <%= score %>
+      </label>
+    <% end %>
     </div>
   </div>
  
