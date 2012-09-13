@@ -25,8 +25,8 @@ gem 'jquery-ui-rails'
 gem 'bootstrap-sass', '~> 2.1.0.0'
 
 
-group :development, :test do
-	gem 'rspec-rails'
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
 end
 
 group :test do
