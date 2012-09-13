@@ -1,11 +1,18 @@
 require 'spec_helper'
 
-describe "StaticPages" do
+describe "Static Pages" do
   describe "Home page" do
     it "should have the content 'Beer App'" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
       visit '/static_pages/home'
       page.should have_content('Beer App')
     end
   end
+
+   describe "Login page" do
+    it "should have the content 'Login'" do
+      visit '/static_pages/login'
+      page.should have_content('Login')
+    end
+  end
+
 end
