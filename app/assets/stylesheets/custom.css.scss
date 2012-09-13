@@ -1,1 +1,32 @@
 @import "bootstrap";
+
+$black: #000;
+
+.control-group {
+	position: relative;
+}
+
+ .slider {
+ 	position: absolute;
+ 	left: 400px;
+ 	top: 22px;
+ 	width: 50%;
+
+ 	ul{
+		margin: 0;
+		margin-left: 1px;
+		position: relative;
+		top: -4px;
+	}
+
+	li {
+	 	border-right: 1px solid $black;
+	 	height: 20px;
+	 	width: 33%;
+	 	display: inline-block;
+ 	}
+
+ 	li:first-child{
+ 		border-left: 1px solid $black;
+ 	}
+ }

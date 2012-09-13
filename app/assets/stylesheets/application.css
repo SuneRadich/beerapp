@@ -13,14 +13,3 @@
  *= require_tree .
  */
  @import "bootstrap";
-
-.control-group {
-	position: relative;
-}
-
- .slider {
- 	position: absolute;
- 	left: 400px;
- 	top: 22px;
- 	width: 50%;
- }

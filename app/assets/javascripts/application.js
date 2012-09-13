@@ -35,7 +35,7 @@ $(function(){
 			//Set input to selected value
 			$('input', $(this).closest('.control-group') ).val(ui.value);
 		}
-	});
+	}).append('<ul><li><li><li></ul>');
 
 	/**
 	 * Change event, set the value of the slider, if the input field is changed
