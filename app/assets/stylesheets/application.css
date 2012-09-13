@@ -9,6 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require jquery.ui.all
  *= require_tree .
  */
  @import "bootstrap";
+
+.control-group {
+	position: relative;
+}
+
+ .slider {
+ 	position: absolute;
+ 	left: 400px;
+ 	top: 22px;
+ 	width: 50%;
+ }

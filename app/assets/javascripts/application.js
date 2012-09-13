@@ -12,4 +12,36 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require_tree .
+
+$(function(){
+
+	/**
+	 * Initialize the sliders
+	 */
+	$(".slider").slider({
+		"max" : 120,
+		"step": 1,
+		"value": 0,
+		"animate": false,
+		create: function(event, ui){
+			//Get the value of the input field
+			var inputValue = $('input', $(this).closest('.control-group') ).val();
+			//Set the value of the slider
+			$(this).slider('option', 'value', inputValue );
+		},
+		slide: function(event, ui){
+			//Set input to selected value
+			$('input', $(this).closest('.control-group') ).val(ui.value);
+		}
+	});
+
+	/**
+	 * Change event, set the value of the slider, if the input field is changed
+	 */
+	$(".control-group input").change(function(){
+		//Set value of slider if text field is filled
+		$(this).closest(".control-group").find(".slider").slider("value", $(this).val());
+	});
+});

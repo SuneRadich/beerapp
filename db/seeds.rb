@@ -19,6 +19,15 @@ User.create(
 	]
 )
 
+Beer.create(
+	[
+		{
+			name: 'Grøn Tuborg',
+			brewery_id: 17,
+			alcohol: 46
+		}
+	]
+)
 Brewery.create(
 	[
 		{ name: 'Grauballe Bryghus'},
