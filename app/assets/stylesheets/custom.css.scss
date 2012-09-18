@@ -24,9 +24,9 @@ $black: #000;
 	 	height: 20px;
 	 	width: 33%;
 	 	display: inline-block;
- 	}
 
- 	li:first-child{
- 		border-left: 1px solid $black;
+	 	&:first-child {
+ 			border-left: 1px solid $black;
+ 		}
  	}
  }

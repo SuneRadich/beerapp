@@ -1,30 +1,11 @@
 <h1>Listing tastings</h1>
 
-<table>
+<table class="table table-bordered table-striped table-hover table-condensed">
   <tr>
     <th>Date</th>
     <th>Beer</th>
     <th>User</th>
-    <th>Scenthopsflower</th>
-    <th>Scentfruit</th>
-    <th>Scentmalt</th>
-    <th>Foamamount</th>
-    <th>Foamcolor</th>
-    <th>Foamdensity</th>
-    <th>Foamtime</th>
-    <th>Clarityclarity</th>
-    <th>Clarityprecipitate</th>
-    <th>Color</th>
-    <th>Tastesweetness</th>
-    <th>Tastebitterness</th>
-    <th>Tasteaftertaste</th>
-    <th>Mouthtemp</th>
-    <th>Mouthcarbon</th>
-    <th>Mouthfill</th>
     <th>Score</th>
-    <th>Comment</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -33,31 +14,24 @@
     <td><%= tasting.date %></td>
     <td><%= tasting.beer.name %></td>
     <td><%= tasting.user.name %></td>
-    <td><%= tasting.scentHopsFlower %></td>
-    <td><%= tasting.scentFruit %></td>
-    <td><%= tasting.scentMalt %></td>
-    <td><%= tasting.foamAmount %></td>
-    <td><%= tasting.foamColor %></td>
-    <td><%= tasting.foamDensity %></td>
-    <td><%= tasting.foamTime %></td>
-    <td><%= tasting.clarityClarity %></td>
-    <td><%= tasting.clarityPrecipitate %></td>
-    <td><%= tasting.color %></td>
-    <td><%= tasting.tasteSweetness %></td>
-    <td><%= tasting.tasteBitterness %></td>
-    <td><%= tasting.tasteAftertaste %></td>
-    <td><%= tasting.mouthTemp %></td>
-    <td><%= tasting.mouthCarbon %></td>
-    <td><%= tasting.mouthFill %></td>
     <td><%= tasting.score %></td>
-    <td><%= tasting.comment %></td>
-    <td><%= link_to 'Show', tasting %></td>
-    <td><%= link_to 'Edit', edit_tasting_path(tasting) %></td>
-    <td><%= link_to 'Destroy', tasting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>
+        <%= link_to(tasting, class: "btn btn-small") do %>
+          <i class="icon-eye-open"></i> Show
+        <% end %>
+
+        <%= link_to(edit_tasting_path(tasting), class: "btn btn-small") do %>
+          <i class="icon-pencil"></i> Edit
+        <% end %>
+
+        <%= link_to(tasting, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-small") do %>
+            <i class="icon-warning-sign"></i> Destroy
+        <% end %>   
+    </td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tasting', new_tasting_path %>
+<%= link_to 'New Tasting', new_tasting_path, class: 'btn btn-primary' %>
