@@ -10,17 +10,17 @@
   <tr>
     <td><%= user.name %></td>
     <td>
-    <%= link_to(user, class: "btn btn-small") do %>
-          <i class="icon-eye-open"></i> Show
-        <% end %>
+      <%= link_to(user, class: "btn btn-small") do %>
+        <i class="icon-eye-open"></i> Show
+      <% end %>
 
-        <%= link_to(edit_user_path(user), class: "btn btn-small") do %>
-          <i class="icon-pencil"></i> Edit
-        <% end %>
+      <%= link_to(edit_user_path(user), class: "btn btn-small") do %>
+        <i class="icon-pencil"></i> Edit
+      <% end %>
 
-        <%= link_to(user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-small") do %>
-            <i class="icon-warning-sign"></i> Destroy
-        <% end %>   
+      <%= link_to(user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-small") do %>
+          <i class="icon-warning-sign"></i> Destroy
+      <% end %>   
     </td>
   </tr>
 <% end %>
