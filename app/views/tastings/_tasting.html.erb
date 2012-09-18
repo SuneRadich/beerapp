@@ -1,0 +1,18 @@
+<table class="table table-bordered table-striped table-condensed table-hover">
+	<thead>
+		<tr>
+			<th>Date</th>
+			<th>Beer</th>
+			<th>Score</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= tasting.date %></td>
+			<td><%= tasting.beer.name %></td>
+			<td><%= tasting.score %></td>
+			<td><%= link_to("Show", tasting) %>
+		</tr>
+	</tbody>
+</table>

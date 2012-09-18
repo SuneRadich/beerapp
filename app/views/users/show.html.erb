@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<h2>All tastings for <%= @user.name %></h2>
+<%= render @tastings %>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
