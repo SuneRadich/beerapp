@@ -13,7 +13,7 @@
   <tr>
     <td><%= tasting.date %></td>
     <td><%= tasting.beer.name %></td>
-    <td><%= tasting.user.name %></td>
+    <td><%= link_to(tasting.user.name, tasting.user) %></td>
     <td><%= tasting.score %></td>
     <td>
         <%= link_to(tasting, class: "btn btn-small") do %>
