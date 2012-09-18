@@ -2,6 +2,10 @@
 
 $black: #000;
 
+section {
+	margin-top: 50px;
+}
+
 .control-group {
 	position: relative;
 }
@@ -9,7 +13,7 @@ $black: #000;
  .slider {
  	position: absolute;
  	left: 400px;
- 	top: 22px;
+ 	top: 9px;
  	width: 50%;
 
  	ul{

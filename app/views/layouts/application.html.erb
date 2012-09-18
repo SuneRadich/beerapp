@@ -9,17 +9,19 @@
 <body>
 	<section class="container-fluid">
 		<nav class="row-fluid">
-			<div class="navbar">
+			<div class="navbar navbar-inverse navbar-fixed-top">
   				<div class="navbar-inner">
-    				<%= link_to "Beer App", :root, class: "brand" %>
-    				<ul class="nav">
-						<li <%= request.path_parameters[:controller] == 'beers' ? "class='active'" : "" %>>
-							<%= link_to "Beers", beers_path %>
-						</li>
-						<li <%= request.path_parameters[:controller] == 'tastings' ? "class='active'" : "" %>>
-							<%= link_to "Tastings", tastings_path %>
-						</li>
-				    </ul>
+  					<div class="container">
+	    				<%= link_to "Beer App", :root, class: "brand" %>
+	    				<ul class="nav">
+							<li <%= request.path_parameters[:controller] == 'beers' ? "class='active'" : "" %>>
+								<%= link_to "Beers", beers_path %>
+							</li>
+							<li <%= request.path_parameters[:controller] == 'tastings' ? "class='active'" : "" %>>
+								<%= link_to "Tastings", tastings_path %>
+							</li>
+					    </ul>
+					</div>
 				</div>
 			</div>
 		</nav>
