@@ -11,11 +11,14 @@
 		<nav class="row-fluid">
 			<div class="navbar">
   				<div class="navbar-inner">
-    				<a class="brand" href="#">Beer App</a>
+    				<%= link_to "Beer App", :root, class: "brand" %>
     				<ul class="nav">
-						<li class="active"><a href="#">Beers</a></li>
-						<li><a href="#">Users</a></li>
-						<li><a href="#">Tastings</a></li>
+						<li <%= request.path_parameters[:controller] == 'beers' ? "class='active'" : "" %>>
+							<%= link_to "Beers", beers_path %>
+						</li>
+						<li <%= request.path_parameters[:controller] == 'tastings' ? "class='active'" : "" %>>
+							<%= link_to "Tastings", tastings_path %>
+						</li>
 				    </ul>
 				</div>
 			</div>

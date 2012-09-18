@@ -7,6 +7,11 @@ Beerapp::Application.routes.draw do
   resources :beers
   resources :breweries
 
+  root :to => 'static_pages#home'
+
+  match '/beer',    to: 'beers#index'
+  match '/tasting', to: 'tastings#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
