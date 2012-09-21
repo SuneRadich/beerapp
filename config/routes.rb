@@ -11,6 +11,7 @@ Beerapp::Application.routes.draw do
 
   match '/beer',    to: 'beers#index'
   match '/tasting', to: 'tastings#index'
+  match '/login',   to: 'static_pages#login'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
