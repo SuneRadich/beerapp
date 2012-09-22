@@ -9,11 +9,4 @@ class Tasting < ActiveRecord::Base
   #make sure there is a score, and that is is less than 8 and more than 0
   validates :score, :numericality => { :greater_than => 0, :less_than => 8 }, :presence => true		
 
-
-#validates :min_age, :numericality => { :greater_than => 0, :less_than_or_equal_to => :max_age }
-
-#validates :max_age, :numericality => { :less_than_or_equal_to => 100 }
-
-#validates_numericality_of :n, :only_integer => true, :message => "can only be whole number."
-#validates_inclusion_of :n, :in => 21..30, :message => "can only be between 21 and 30."
 end
