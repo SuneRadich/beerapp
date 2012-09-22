@@ -23,7 +23,7 @@ end
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass', '~> 2.1.0.0'
-
+gem 'bcrypt-ruby', '3.0.1'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
