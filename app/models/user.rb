@@ -3,6 +3,6 @@ class User < ActiveRecord::Base
   
   has_many :tastings
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
   validates :password, presence: true
 end

@@ -22,4 +22,12 @@ describe User do
     before { @user.password = " " }
     it { should_not be_valid }
   end
+
+  describe "when name is too long" do
+    before { @user.name = "a" * 51 }
+    it { should_not be_valid }
+  end
+
+   pending "when password is not strong " 
+   
 end
