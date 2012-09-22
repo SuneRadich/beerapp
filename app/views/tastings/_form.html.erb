@@ -28,7 +28,7 @@
 <div class="control-group">
    <%= label_tag(:user_id, nil, :class => "control-label") %>
     <div class="controls">
-      <%= collection_select(:tasting, :user_id, User.all, :id, :name, :prompt => "Select user") %>
+      <%= collection_select(:tasting, :user_id, User.all, :id, :name_capitalize, :prompt => "Select user") %>
     </div>
 </div>
 
