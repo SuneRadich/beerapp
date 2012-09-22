@@ -8,14 +8,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create(
 	[
-		{ name: 'Sune' },
-		{ name: 'Nette' },
-		{ name: 'Lau' },
-		{ name: 'Sarah' },
-		{ name: 'Simon' },
-		{ name: 'Pernille' },
-		{ name: 'Jeppe' },
-		{ name: 'Dite' }
+		{ name: 'Sune', password: "password", password_confirmation: "password" },
+		{ name: 'Nette', password: "password", password_confirmation: "password"},
+		{ name: 'Lau', password: "password", password_confirmation: "password" },
+		{ name: 'Sarah', password: "password", password_confirmation: "password" },
+		{ name: 'Simon', password: "password", password_confirmation: "password" },
+		{ name: 'Pernille', password: "password", password_confirmation: "password" },
+		{ name: 'Jeppe', password: "password", password_confirmation: "password" },
+		{ name: 'Ditte', password: "password", password_confirmation: "password" }
 	]
 )
 
