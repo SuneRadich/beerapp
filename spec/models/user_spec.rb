@@ -29,5 +29,14 @@ describe User do
   end
 
    pending "when password is not strong " 
-   
+
+describe "when name is already taken" do
+    before do
+      user_with_same_name = @user.dup
+      user_with_same_name.save
+    end
+
+    it { should_not be_valid }
+  end
+
 end
